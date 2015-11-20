@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Animation 4 - Change Position</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style>
+      @keyframes moveAnim {
+        0%   { left:0px; top:0px; }
+        25%  { left:200px; top:0px; }
+        50%  { left:200px; top:200px; }
+        75%  { left:0px; top:200px; }
+        100% { left:0px; top:0px; }
+      }
+    @keyframes fontAnim {
+        0% {
+            font-size: 14px;
+        }
+        90% { 
+           font-size: 100px;
+        }
+        100% {
+        font-size: 100px;
+       }
+    }
+@keyframes rotateAnim {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(180deg);
+        }
+      }
+
+      #logo {
+        animation-name: rotateAnim;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      div {
+        width: 2000px;
+        height: 200px;
+        position: relative;
+        animation: moveAnim 4s infinite, fontAnim 3s infinite, rotateAnim 3s Infinite;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div style="background: green;">Oh COOOOOOOOOOOOOÔOOOOOOOÖOL!</div>
+  </body>
+</html>
